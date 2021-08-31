@@ -1,0 +1,38 @@
+<div class="sortable-section">
+  <div class="container">
+    <div class="row page-title">
+      <div class="col-lg-12">
+        <h3 class="display-4 text-center">
+          Matrix Machine
+          <small class="text-muted">Angular</small>
+        </h3>
+      </div>
+    </div>
+    <div class="row page-content">
+      <div class="col-lg-12 mt-3 mb-3">
+        <h5 class="display-6">Sortable List</h5>
+      </div>
+      <div class="col-lg-4 mb-5" *ngFor="let item of sortableData">
+        <div class="card">
+          <div class="card-body">
+            <div class="section-title">
+              <h5 class="card-title" *ngIf="item.show_section_title=='yes'">{{ item.section_name }}</h5>
+              <div class="link-show-title">
+                <input class="form-check-input" type="checkbox" value="" [checked]="item.show_section_title == 'yes'" id="flexCheckChecked" (change)="radioChecked(item)">&nbsp;Show title
+              </div>
+            </div>
+            <bs-sortable
+              [(ngModel)]="item.section_fields_details"
+              fieldName="display_name"
+              itemClass="sortable-item"
+              itemActiveClass="sortable-item-active"
+              placeholderItem="Drag here"
+              placeholderClass="dropable-zone text-center"
+              wrapperClass="sortable-wrapper"
+            ></bs-sortable>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <ngx-spinner></ngx-spinner>
+    <div class="row page-title">
+        <div class="col-lg-12">
+            <h3 class="display-4 text-center">
+                Matrix Machine 
+                <small class="text-muted">Angular</small>
+            </h3>
+        </div>
+    </div>
+    <div class="row page-content">
+        <div class="col-lg-12 mt-3 mb-3">
+            <h5 class="display-6">User List</h5>
+        </div>
+        <div class="col-lg-12 mb-5">
+            <table class="table table-striped user-table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" *ngFor="let head of headers">
+                        {{head}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{user.id}}</td>
+                    <td class="text-capitalize">{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td class="text-capitalize">{{user.gender}}</td>
+                    <td class="text-capitalize">{{user.status}}</td>
+                    <td><img src="{{user.img}}" onerror="this.src='assets/images/user.png';"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{
+    "Commercial": [
+      { "Business": "Business" }, 
+      { "Business Only": "Business" }, 
+      { "Commercial Condo": "Condo" }, 
+      { "Commercial Retail": "Condo"}
+    ],
+    "Multi-Unit": [
+      { "5-8 Units": "Units" }, 
+      { "9-12 Units": "Units" }, 
+      { "Over 12 Units": "Units"}
+    ],
+    "Residential": [
+      { "Co-Op": "Co-Op" }, 
+      { "Condominium": "Condo" }, 
+      { "Cottage / Rec. Properties": "Condo"}
+    ]
+  }

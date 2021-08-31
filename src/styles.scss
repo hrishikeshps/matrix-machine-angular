@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.navbar-light .navbar-nav .nav-link.active{
+    font-weight: 500;
+}
+
+.page-title{
+    padding-top:2rem;
+}
+
+.page-content{
+    padding-top: 2rem;
+}
+
+// User Section
+.user-table td img{
+    width: 20px;
+}
+
+// Object Section
+.object-section {
+    .table{
+        td{
+            ul{
+                padding-left:0;
+                list-style: none;
+            }
+        }
+    }
+}
+
+// Sortable Section
+.sortable-section{
+    .card{
+        .card-title{
+            display: inline-block;
+        }
+
+        .link-show-title {
+            float: right;
+        }
+
+        .section-title{
+            height: 40px;
+        }
+    }
+    
+    .sortable-item {
+        padding: 6px 12px;
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 1.4em;
+        text-align: center;
+        cursor: grab;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        border-color: #adadad;
+    }
+    
+    .dropable-zone{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed;
+        border-radius: 4px;
+    }
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

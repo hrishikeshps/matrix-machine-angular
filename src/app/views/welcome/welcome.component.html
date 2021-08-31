@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row page-title">
+        <div class="col-lg-12">
+            <h3 class="display-4 text-center">
+                Matrix Machine 
+                <small class="text-muted">Angular</small>
+            </h3>
+        </div>
+    </div>
+    <div class="row page-content justify-content-center">
+        <div class=" col-xl-6 col-lg-8 mt-5 mt-lg-0" *ngIf="!isAuthenticated">
+            <h6>In order to access the other pages, kindly enter 'admin' in the following textbox.</h6>
+            <form class="text-center" [formGroup]="authForm" (ngSubmit)="grantAccess()">
+                <input class="form-control" formControlName="keyword" type="text" placeholder="Enter the key phrase" aria-label="enter the key phrase" [ngClass]="{ 'is-invalid': submitted && f.keyword.errors }">
+                <div *ngIf="submitted && f.keyword.errors" class="invalid-feedback text-left">
+                    <div *ngIf="f.keyword.errors.required">Key phrase is required</div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 text-center">Grant me access!</button>
+            </form>
+        </div>
+        <div class=" col-xl-6 col-lg-8 mt-5 mt-lg-0" *ngIf="isAuthenticated">
+            <h6>Hello Admin! You have access rights to other pages.</h6>
+            <button type="button" class="btn btn-danger mt-3 text-center" (click)="logout()">Logout!</button>
+        </div>
+    </div>
+</div>
