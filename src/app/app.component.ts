@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, Event as NavigationEvent } from '@angular/router';
 
-import { Subscription } from 'rxjs/Subscription';
 import { filter } from 'rxjs/operators';
 
 import { NavbarComponent } from './shared/layout/navbar/navbar.component';
@@ -16,7 +15,7 @@ export class AppComponent {
 
   @ViewChild(NavbarComponent) navbar!: NavbarComponent;
 
-  constructor(private router: Router, private element: ElementRef) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events
