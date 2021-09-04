@@ -1,5 +1,4 @@
 <div class="container">
-  <ngx-spinner></ngx-spinner>
     <div class="row page-title">
         <div class="col-lg-12">
             <h3 class="display-4 text-center">
@@ -12,7 +11,8 @@
         <div class="col-lg-12 mt-3 mb-3">
             <h5 class="display-6">User List</h5>
         </div>
-        <div class="col-lg-12 mb-5">
+        <div class="col-lg-12 mb-5 position-relative min-vh-100">
+          <ngx-spinner [fullScreen]="false"></ngx-spinner>
             <table class="table table-striped user-table">
                 <thead>
                   <tr>
